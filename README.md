@@ -13,8 +13,10 @@ Custom corefile (named Corefile, no extension in the current directory):
 
 ## Building your own image
 
-1. For now you must clone the coreDNS repository and compile with the plugin yourself, then copy the coredns binary to this folder and build the image (soon i will put this into the build image process so you can just use this Dockerfile to publish by selecting the public version of coreDNS)
-2. Once that is completed you can publish the docker image wherever you want
+1. Have at least docker community edition installed on a linux host
+2. Clone this repo and cd into the directory
+3. run `DOCKER_BUILDKIT=1 docker build -t {image_name} ./`
+4. push to a repository if you want
 
 
 ## Notes
