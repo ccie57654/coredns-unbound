@@ -7,7 +7,7 @@ SHELL ["/bin/sh", "-ec"]
 ENV GOFLAGS="-buildvcs=false"
 ENV CGOENABLED=1
 
-RUN git clone --depth 20 https://github.com/coredns/coredns.git
+RUN git clone --depth 1 --branch v1.12.0 https://github.com/coredns/coredns.git
 WORKDIR /go/coredns
 
 RUN sed -i 's/^route53/#route53/; s/^clouddns/#clouddns/; s/^azure/#azure/' plugin.cfg ; \
